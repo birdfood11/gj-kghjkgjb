@@ -1,0 +1,76 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	string player1;
+	int player2;
+	
+	cout << "What do you want to play ('r', 'p', or 's'): ";
+	cin >> player1;
+
+	srand(time(0));
+
+	player2 = (rand() %  3) + 1;
+	cout << player2 << endl;
+
+
+	if(player1 == "r") {
+		cout << "You played ROCK." << endl;
+
+		if(player2 == 1) {
+			cout << "Computer played ROCK." << endl;
+			cout << "\nIt's a tie." << endl;
+		}
+
+		else if(player2 == 2) {
+			cout << "Computer played PAPER." << endl;
+			cout << "\nYou lose! (loser lol)" << endl;
+		}
+
+		else if(player2 == 3) {
+			cout << "Computer played SCISSORS." << endl;
+			cout << "\nYou win (yipee)!" << endl;
+		}
+	}
+
+	else if(player1 == "p") {
+		cout << "You played PAPER." << endl;
+
+		if(player2 == 1) {
+			cout << "Computer played ROCK." << endl;
+			cout << "\nYou win!" << endl;
+		}
+
+		else if(player2 == 2) {
+			cout << "Computer played PAPER." << endl;
+			cout << "\nIt's a tie." << endl;
+		}
+
+		else if(player2 == 3) {
+			cout << "Computer played SCISSORS." << endl;
+			cout << "\nYou lose!" << endl;
+		}
+	}
+
+	else if(player1 == "s") {
+		cout << "You played SCISSORS." << endl;
+
+		if(player2 == 1) {
+			cout << "Computer played ROCK." << endl;
+			cout << "\nYou lose!" << endl;
+		}
+
+		else if(player2 == 2) {
+			cout << "Computer played PAPER." << endl;
+			cout << "\nYou win!" << endl;
+		}
+
+		else if(player2 == 3) {
+			cout << "Computer played SCISSORS." << endl;
+			cout << "\nIt's a tie." << endl;
+		}
+	}
+
+}
